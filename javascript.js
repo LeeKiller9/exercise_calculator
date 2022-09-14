@@ -12,7 +12,7 @@ function get_value(x) {
 function get_opera(y) {
     if (opera === null) {
         sum = parseInt(num)
-    } else {
+    } else if (num !== '') {
         num = parseInt(num)
         switch (opera) {
             case '+':
@@ -51,6 +51,7 @@ function calculate() {
             break
     }
     document.getElementById('result').innerHTML = sum
+    num = ''
 }
 
 function reset() {
